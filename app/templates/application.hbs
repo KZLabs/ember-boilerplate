@@ -1,22 +1,18 @@
 {{!-- The following component displays Ember's default welcome message. --}}
 
-{{#paper-toolbar}}
-  <div class="md-toolbar-tools">
-    {{#paper-button primary=true}}
-      Home
-    {{/paper-button}}
-    {{#paper-button}}
-      About
-    {{/paper-button}}
-    <div class="paper-right">
-      {{#paper-button}}
-        Login
-      {{/paper-button}}
-    </div>
+{{tool-bar}}
+<div class="layout-row layout-xs-column">
+  <div class="layout-column flex-xs flex-gt-xs-40">
+    {{# paper-card as |card|}}
+      {{# card.title as |title| }}
+        {{# title.text as |text| }}
+          {{# text.headline}} ember boilerplaite{{/text.headline}}
+          {{# text.subhead}} Material design{{/text.subhead}}
+        {{/title.text}}
+        {{title.media size="lg" src="http://emberjs.com/images/tomsters/construction.png" alt="Tomster" title="Tomster"}}
+      {{/card.title}}
+    {{/paper-card}}
   </div>
-{{/paper-toolbar}}
-<div class="layout-row flex">
-  <h1>Hello world</h1>
 </div>
 {{!-- Feel free to remove this! --}}
 {{outlet}}

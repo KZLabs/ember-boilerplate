@@ -1,10 +1,6 @@
-$primary: "teal";
+$primary: "deep-orange";
 $accent: "light-green";
 $warn: "pink";
-
-@import "color-palette";
-$color-teal: map-merge($color-teal, ('contrast':  $light-contrast-color));
-$color-light-green: map-merge($color-light-green, ('contrast':  $light-contrast-color));
 
 @import 'ember-paper';
 
