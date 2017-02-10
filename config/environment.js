@@ -20,6 +20,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      apiHost : 'http://localhost:3000',
+      apiNamespace : 'v1'
     },
   };
   ENV.contentSecurityPolicy = {
@@ -30,6 +32,20 @@ module.exports = function(environment) {
     'connect-src': "'self'",
     'img-src': "'self' data:",
     'media-src': "'self'"
+  };
+  ENV['ember-simple-auth'] = {
+    routeAfterAuthentication: 'home',
+    routeIfAlreadyAuthenticated: 'home',
+    authorizer: 'authorizer:token'
+  };
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: 'http://localhost:3000/v1/login',
+    refreshAccessTokens: true,
+    identificationField: 'email',
+    tokenPropertyName: 'token',
+    authorizationPrefix: 'Bearer ',
+    authorizationHeaderName: 'Authorization',
+    refreshLeeway: 300 // Refresh the token 5 minutes (300s) before it expires.
   };
 
   if (environment === 'development') {

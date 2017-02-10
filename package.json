@@ -1,9 +1,9 @@
 {
   "name": "ember-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Small description for ember-boilerplate goes here",
   "license": "MIT",
-  "author": "",
+  "author": "KZlabs - Nicolas Gaviria Mejia",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -37,6 +37,8 @@
     "ember-load-initializers": "^0.6.0",
     "ember-paper": "1.0.0-alpha.15",
     "ember-resolver": "^2.0.3",
+    "ember-simple-auth": "1.1.0",
+    "ember-simple-auth-token": "2.1.0",
     "ember-source": "^2.11.0",
     "ember-welcome-page": "^2.0.2",
     "loader.js": "^4.0.10"

@@ -1,18 +1,5 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-
-{{tool-bar}}
-<div class="layout-row layout-xs-column">
-  <div class="layout-column flex-xs flex-gt-xs-40">
-    {{# paper-card as |card|}}
-      {{# card.title as |title| }}
-        {{# title.text as |text| }}
-          {{# text.headline}} ember boilerplaite{{/text.headline}}
-          {{# text.subhead}} Material design{{/text.subhead}}
-        {{/title.text}}
-        {{title.media size="lg" src="http://emberjs.com/images/tomsters/construction.png" alt="Tomster" title="Tomster"}}
-      {{/card.title}}
-    {{/paper-card}}
-  </div>
+{{# tool-bar session=session action="logout" }}{{/tool-bar}}
+<div class="body">
+  {{outlet}}
 </div>
-{{!-- Feel free to remove this! --}}
-{{outlet}}
+
