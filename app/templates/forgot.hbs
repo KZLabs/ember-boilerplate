@@ -1,0 +1,18 @@
+{{# paper-card as |card|}}
+  {{# card.title as |title| }}
+    {{# title.text as |text| }}
+      {{# text.headline}} Login{{/text.headline}}
+      {{# text.subhead }}Hey, it happens to everyone, Just let us know what email you use to login and we'll send you an email with instructions{{/text.subhead}}
+    {{/title.text}}
+  {{/card.title}}
+  {{#paper-form  onSubmit=(action "forgot")  as |form|}}
+    <div class="layout-row layout-align-space-around-center">
+      <div class="layout-column flex-80">
+        {{form.input label="Email" type="email" value=model.email onChange=(action (mut model.email)) required=true}}
+      </div>
+    </div>
+    {{# card.actions}}
+      {{#form.submit-button raised=true primary=true}}Send{{/form.submit-button}}
+    {{/card.actions}}
+  {{/paper-form}}
+{{/paper-card}}

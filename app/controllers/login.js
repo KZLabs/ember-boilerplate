@@ -8,6 +8,7 @@ export default Ember.Controller.extend({
       var credentials = this.getProperties('identification', 'password'),
       authenticator = 'authenticator:token';
       this.get('session').authenticate(authenticator, credentials);
+      this.transitionToRoute('home');
     }
   },
   emailValidation: [{

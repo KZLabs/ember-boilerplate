@@ -9,11 +9,6 @@
       <div class="layout-column flex-80">
         {{form.input label="Email" type="email" value=identification onChange=(action (mut identification)) required=true customValidations=emailValidation}}
         {{form.input label="Password" type= "password" value=password onChange=(action (mut password)) required=true }}
-        <div class="layout-align-end">
-          {{#link-to "home"}}
-            <h5>forgot password</h5>
-          {{/link-to}}
-        </div>
       </div>
     </div>
     {{# card.actions}}
