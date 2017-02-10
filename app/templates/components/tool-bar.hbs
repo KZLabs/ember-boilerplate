@@ -14,12 +14,10 @@
             <a {{action 'logout'}}>Logout</a>
           {{/paper-button}}
       {{else}}
-        {{#link-to 'login'}}
-          {{#link-to "login"}}
-            {{#paper-button}}
-              login
-            {{/paper-button}}
-          {{/link-to}}
+        {{#link-to "login"}}
+          {{#paper-button}}
+            login
+          {{/paper-button}}
         {{/link-to}}
       {{/if}}
     </div>

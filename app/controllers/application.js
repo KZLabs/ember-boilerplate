@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
   session: Ember.inject.service('session'),
   actions: {
     logout: function() {
-      console.log("logout")
+      console.log("logout");
     }
   },
 });
