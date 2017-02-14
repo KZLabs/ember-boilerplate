@@ -1,6 +1,7 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+
   var ENV = {
     modulePrefix: 'ember-boilerplate',
     environment: environment,
@@ -35,16 +36,19 @@ module.exports = function(environment) {
   };
   ENV['ember-simple-auth'] = {
     routeAfterAuthentication: 'home',
-    routeIfAlreadyAuthenticated: 'home',
+    // routeIfAlreadyAuthenticated: 'home',
     authorizer: 'authorizer:token'
   };
   ENV['ember-simple-auth-token'] = {
     serverTokenEndpoint: 'http://localhost:3000/v1/login',
     refreshAccessTokens: true,
     identificationField: 'email',
-    tokenPropertyName: 'token',
+    tokenPropertyName: 'user.token',
     authorizationPrefix: 'Bearer ',
     authorizationHeaderName: 'Authorization',
+    headers: {
+      contentType: 'application/json'
+    },
     refreshLeeway: 300 // Refresh the token 5 minutes (300s) before it expires.
   };
 

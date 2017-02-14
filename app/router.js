@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('signup');
   this.route('forgot');
   this.route('change-password');
+  this.route('wait-email');
 });
 
 export default Router;

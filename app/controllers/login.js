@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 
   actions: {
     authenticate: function() {
-      var credentials = this.getProperties('identification', 'password'),
+      var credentials = this.get('model'),
       authenticator = 'authenticator:token';
       this.get('session').authenticate(authenticator, credentials);
       this.transitionToRoute('home');

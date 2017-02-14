@@ -7,8 +7,8 @@
   {{#paper-form  onSubmit=(action "authenticate")  as |form|}}
     <div class="layout-row layout-align-space-around-center">
       <div class="layout-column flex-80">
-        {{form.input label="Email" type="email" value=identification onChange=(action (mut identification)) required=true customValidations=emailValidation}}
-        {{form.input label="Password" type= "password" value=password onChange=(action (mut password)) required=true }}
+        {{form.input label="Email" type="email" value=model.identification onChange=(action (mut model.identification)) required=true customValidations=emailValidation}}
+        {{form.input label="Password" type= "password" value=model.password onChange=(action (mut model.password)) required=true }}
         <div class="layout-align-end">
           {{#link-to "forgot"}}
             <h5>forgot password</h5>

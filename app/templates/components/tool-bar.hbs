@@ -10,9 +10,7 @@
     {{/paper-button}}
     <div class="paper-right">
       {{#if session.isAuthenticated}}
-          {{#paper-button}}
-            <a {{action 'logout'}}>Logout</a>
-          {{/paper-button}}
+        {{#paper-button onClick=(action "logout")}}Logout{{/paper-button}}
       {{else}}
         {{#link-to "login"}}
           {{#paper-button}}

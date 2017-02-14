@@ -5,12 +5,16 @@ export default Ember.Controller.extend({
   actions: {
     forgot(){
       let data = this.get('model');
+      let that = this;
       this.store.adapterFor('application.js')
         .postRequest('forgot-password',data)
         .then(function (response) {
-          that.transitionToRoute('home');
+          that.send('handleSuccess', response);
+          that.transitionToRoute('wait-email');
         }).catch(function (reason) {
+          that.send('handleError', reason);
           console.log(reason);
+
       })
     }
   }

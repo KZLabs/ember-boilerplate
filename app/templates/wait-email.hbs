@@ -1,0 +1,13 @@
+<div class="layout-row layout-xs-column">
+  <div class="layout-column flex-xs flex-gt-xs-40">
+    {{# paper-card as |card|}}
+      {{# card.title as |title| }}
+        {{# title.text as |text| }}
+          {{# text.headline}} wait for email{{/text.headline}}
+          {{# text.subhead}} please wait for instructions{{/text.subhead}}
+        {{/title.text}}
+        {{title.media size="lg" src="http://emberjs.com/images/tomsters/dc-tomster.png" alt="Tomster" title="Tomster"}}
+      {{/card.title}}
+    {{/paper-card}}
+  </div>
+</div>
